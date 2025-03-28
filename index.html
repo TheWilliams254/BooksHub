@@ -12,37 +12,40 @@
         <nav>
             <ul>
                 <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact us</a></li>
-                <li>Genre</li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Genre</a></li>
             </ul>
         </nav>
     </header>
-    
+
     <div class="container">
         <aside>
-            <ul id="books">
-            
-            </ul>
+            <ul id="books"></ul>
         </aside>
         <main>
             <h4>Order the book you have selected!</h4>
             <div class="Books-info">
                 <div class="details">
-                    <h5 id="title">Title:</h3>
+                    <h5 id="title">Title:</h5>
                     <p id="type">Genre:</p>
                     <p id="available">Availability:</p>
                     <button id="order-book">Order</button>
                 </div>
             </div>
         </main>
+    </div>
 
-        <section id="Contact">
-            <input type="text" id="name" placeholder="Enter your Name"><br>
-            <input type="email" id="email" placeholder="email"><br>
-            <input type="textarea" id="text-area" placeholder="message"><br>
-            <button id="submit">Send</button> &nbsp; &nbsp; &nbsp;<button id="clear">clear</button>
+    <section id="Contact">
+        <form>
+            <input type="text" id="name" placeholder="Enter your Name" required><br>
+            <input type="email" id="email" placeholder="Email" required><br>
+            <textarea id="text-area" placeholder="Message" required></textarea><br>
 
-        </section>
-    <script src="./script.js"> </script>
+            <button type="submit" id="submit">Send</button>
+            <button type="reset" id="clear">Clear</button>
+        </form>
+    </section>
+
+    <script src="./script.js"></script>
 </body>
 </html>

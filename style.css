@@ -62,3 +62,121 @@
     max-width: 400px;
     margin: auto;
 }
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+aside {
+  width: 30%;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#books {
+  list-style: none;
+  padding: 0;
+}
+main {
+  width: 65%;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.Books-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  border-radius: 10px;
+}
+.details h5 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+.details p {
+  font-size: 18px;
+  color: #555;
+}
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+button:hover {
+  background-color: #2980b9;
+}
+#Contact {
+  width: 100%;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 25px;
+  background: linear-gradient(135deg, #6db9ef, #a3d4ff); /* Gradient Background */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: white;
+}
+
+/* Input Fields */
+#Contact input,
+#Contact textarea {
+  width: 80%;
+  max-width: 500px;
+  padding: 10px;
+  margin: 8px 0;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Input Focus Effect */
+#Contact input:focus,
+#Contact textarea:focus {
+  border-color: #0048aa;
+  background: #f1faff;
+  color: #000;
+}
+
+/* Stylish Buttons */
+#Contact button {
+  width: 45%;
+  padding: 12px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #0048aa;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Button Hover Effect */
+#Contact button:hover {
+  background: #002e73;
+  transform: scale(1.05);
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+  #Contact {
+      width: 90%;
+  }
+
+  #Contact input,
+  #Contact textarea {
+      width: 100%;
+  }
+}
