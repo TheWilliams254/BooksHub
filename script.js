@@ -1,13 +1,16 @@
+const API_URL = "https://bookhub-server-waq9.onrender.com"; // ✅ Store API URL in a variable
+
 document.addEventListener("DOMContentLoaded", () => {
     fetchBooks();
 });
 
 function fetchBooks() {
-    fetch("http://localhost:3000/books")
+    fetch(`${API_URL}/books`)
         .then(res => res.json())
         .then(books => {
+            console.log("Books:", books);
             const bookList = document.getElementById("books");
-            bookList.innerHTML = ""; 
+            bookList.innerHTML = "";
 
             books.forEach(book => {
                 const li = document.createElement("li");
@@ -15,22 +18,28 @@ function fetchBooks() {
                 li.classList.add("book", "item");
                 li.dataset.id = book.id;
 
-                // Create a Select button
-                const selectBtn = document.createElement("button");
-                selectBtn.textContent = "Select";
-                selectBtn.classList.add("select-btn");
-                selectBtn.addEventListener("click", () => loadBookDetails(book));
+                // Checking if book is available
+                if (!book.available) {
+                    li.classList.add("not-available");
+                    li.textContent += " (Not Available)";
+                }
 
-                // Append the button to the book list item
-                li.appendChild(selectBtn);
+                // Load book details when clicked
+                li.addEventListener("click", () => loadBookDetails(book.id));
+
                 bookList.appendChild(li);
             });
         })
         .catch(error => console.error("Error fetching books:", error));
 }
-
-function loadBookDetails(book) {
-    document.getElementById("title").textContent = book.title;
-    document.getElementById("genre").textContent = book.type; 
-    document.getElementById("available").textContent = book.available ? "Available" : "Not Available";
+function loadBookDetails(bookId) {
+    fetch(`${API_URL}/books/${bookId}`)
+        .then(res => res.json())
+        .then(book => {
+            console.log("Book details:", book);
+            document.getElementById("title").textContent = `Title: ${book.title}`;
+            document.getElementById("genre").textContent = `Genre: ${book.type}`;
+            document.getElementById("available").textContent = `Availability: ${book.available ? "Available" : "Not Available"}`;
+        })
+        .catch(error => console.error("Error loading book details:", error));
 }
