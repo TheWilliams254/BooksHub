@@ -17,7 +17,18 @@
             </ul>
         </nav>
     </header>
-
+    <section id="about">
+        <div class="about-container">
+            <h2>About BookHub</h2>
+            <p>Welcome to <strong>BookHub</strong>, your one-stop platform for discovering and ordering books online.</p>
+            <p>Our mission is to make books more accessible to readers by providing a seamless browsing and ordering experience.</p>
+            <p>Whether you're looking for fiction, non-fiction, or educational materials, BookHub connects you to the books you love.</p>
+            <p>Below are some of the books we have. Select a book of your liking and order.</p>
+            <p>Happy Reading! 📚</p>
+        </div>
+    </section>
+    
+    
     <div class="container">
         <aside>
             <ul id="books"></ul>
@@ -36,14 +47,18 @@
     </div>
 
     <section id="Contact">
-        <form>
-            <input type="text" id="name" placeholder="Enter your Name" required><br>
-            <input type="email" id="email" placeholder="Email" required><br>
-            <textarea id="text-area" placeholder="Message" required></textarea><br>
-
-            <button type="submit" id="submit">Send</button>
-            <button type="reset" id="clear">Clear</button>
-        </form>
+        <div class="contact-container">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Enter your Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <textarea id="message" placeholder="Message" required></textarea>
+                <div class="buttons">
+                    <button type="submit" class="send-btn">Send</button>
+                    <button type="button" class="clear-btn">Clear</button>
+                </div>
+            </form>
+        </div>
     </section>
 
     <script src="./script.js"></script>

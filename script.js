@@ -40,7 +40,7 @@ function loadBookDetails(book) {
     console.log("Book details:", book);
 
     document.getElementById("title").textContent = `Title: ${book.title}`;
-    document.getElementById("genre").textContent = `Genre: ${book.type}`;
+    document.getElementById("type").textContent = `Genre: ${book.type}`;
     document.getElementById("available").textContent = `Availability: ${book.available ? "Available" : "Not Available"}`;
 }
 
@@ -73,3 +73,29 @@ function placeOrder(book) {
     .then(response => console.log("Order response:", response))
     .catch(error => console.error("Error placing order:", error));
 }
+document.addEventListener("DOMContentLoaded", function () {
+    const contactForm = document.getElementById("contactForm");
+    const clearButton = document.querySelector(".clear-btn");
+
+    contactForm.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent page reload
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        if (name === "" || email === "" || message === "") {
+            alert("Please fill in all fields before sending.");
+            return;
+        }
+
+        console.log("Message Sent:", { name, email, message });
+        alert(`Thank you, ${name}! Your message has been sent.`);
+
+        contactForm.reset(); // Clears the form after submission
+    });
+
+    clearButton.addEventListener("click", function () {
+        contactForm.reset(); // Clears form fields when "Clear" is clicked
+    });
+});

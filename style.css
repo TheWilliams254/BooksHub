@@ -25,6 +25,33 @@
     text-decoration: none;
     font-size: 16px;
   }
+  #about {
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: auto;
+    background: none;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#about h2 {
+    color: #2c3e50;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+#about p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
   #books {
     max-width: 800px;
     margin: 20px auto;
@@ -114,60 +141,80 @@ button {
 button:hover {
   background-color: #2980b9;
 }
-#Contact {
-  width: 100%;
-  max-width: 600px;
-  margin: 30px auto;
-  padding: 25px;
-  background: linear-gradient(135deg, #6db9ef, #a3d4ff); /* Gradient Background */
+.contact-container {
+  width: 50%;
+  margin: 50px auto;
+  padding: 30px;
+  background: linear-gradient(to bottom right, #a8dadc, #457b9d);
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
-  color: white;
 }
 
-/* Input Fields */
-#Contact input,
-#Contact textarea {
-  width: 80%;
-  max-width: 500px;
-  padding: 10px;
-  margin: 8px 0;
-  border: 2px solid #fff;
-  border-radius: 8px;
-  outline: none;
-  font-size: 16px;
-  transition: all 0.3s ease-in-out;
+.contact-container h2 {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
-/* Input Focus Effect */
-#Contact input:focus,
-#Contact textarea:focus {
-  border-color: #0048aa;
-  background: #f1faff;
-  color: #000;
+.contact-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Stylish Buttons */
-#Contact button {
-  width: 45%;
+.contact-container input,
+.contact-container textarea {
+  width: 90%;
   padding: 12px;
-  margin-top: 15px;
+  margin: 10px 0;
   border: none;
-  border-radius: 8px;
-  background: #0048aa;
-  color: white;
+  border-radius: 6px;
   font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  outline: none;
 }
 
-/* Button Hover Effect */
-#Contact button:hover {
-  background: #002e73;
-  transform: scale(1.05);
+.contact-container input:focus,
+.contact-container textarea:focus {
+  border: 2px solid #1d3557;
 }
+
+.contact-container .buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.contact-container button {
+  flex: 1;
+  margin: 10px;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-container .send-btn {
+  background-color: #1d3557;
+}
+
+.contact-container .send-btn:hover {
+  background-color: #457b9d;
+}
+
+.contact-container .clear-btn {
+  background-color: #e63946;
+}
+
+.contact-container .clear-btn:hover {
+  background-color: #a62834;
+}
+
 
 /* Responsive Styling */
 @media screen and (max-width: 768px) {
