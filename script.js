@@ -25,21 +25,51 @@ function fetchBooks() {
                 }
 
                 // Load book details when clicked
-                li.addEventListener("click", () => loadBookDetails(book.id));
+                li.addEventListener("click", () => loadBookDetails(book));
 
                 bookList.appendChild(li);
             });
         })
         .catch(error => console.error("Error fetching books:", error));
 }
-function loadBookDetails(bookId) {
-    fetch(`${API_URL}/books/${bookId}`)
-        .then(res => res.json())
-        .then(book => {
-            console.log("Book details:", book);
-            document.getElementById("title").textContent = `Title: ${book.title}`;
-            document.getElementById("genre").textContent = `Genre: ${book.type}`;
-            document.getElementById("available").textContent = `Availability: ${book.available ? "Available" : "Not Available"}`;
-        })
-        .catch(error => console.error("Error loading book details:", error));
+
+let selectedBook = null; // ✅ Store the selected book
+
+function loadBookDetails(book) {
+    selectedBook = book; // ✅ Save the selected book for ordering
+    console.log("Book details:", book);
+
+    document.getElementById("title").textContent = `Title: ${book.title}`;
+    document.getElementById("genre").textContent = `Genre: ${book.type}`;
+    document.getElementById("available").textContent = `Availability: ${book.available ? "Available" : "Not Available"}`;
+}
+
+document.getElementById("orderButton").addEventListener("click", function () {
+    if (!selectedBook) {
+        alert("Please select a book first.");
+        return;
+    }
+
+    if (!selectedBook.available) {
+        alert(`Sorry, "${selectedBook.title}" is not available for ordering.`);
+    } else {
+        alert(`Order placed successfully for "${selectedBook.title}"!`);
+        placeOrder(selectedBook);
+    }
+});
+
+function placeOrder(book) {
+    fetch(`${API_URL}/orders`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            bookId: book.id,
+            title: book.title,
+        }),
+    })
+    .then(res => res.json())
+    .then(response => console.log("Order response:", response))
+    .catch(error => console.error("Error placing order:", error));
 }
