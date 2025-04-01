@@ -9,8 +9,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #5c9255;
-    color: white;
+    background:linear-gradient(to right, #b3cde0, #f1f2f6);
+    color: #333;
     padding: 15px 50px;
   }
   nav ul {
@@ -22,7 +22,7 @@ body {
   }
   
   nav ul li a {
-    color: white;
+    color: #333;
     text-decoration: none;
     font-size: 16px;
   }
