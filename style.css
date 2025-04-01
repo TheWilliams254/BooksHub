@@ -1,9 +1,10 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
+body {
+  background: linear-gradient(to right, #f0f8ff, #e6e6fa);
+  color: #333;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
   header {
     display: flex;
     justify-content: space-between;
@@ -25,8 +26,24 @@
     text-decoration: none;
     font-size: 16px;
   }
+  html {
+    scroll-behavior: smooth;
+}
+section, .book-list, .order-section, .about-section {
+  border: none; /* Removes borders */
+  background: rgba(255, 255, 255, 0.9); /* Light transparent background */
+  box-shadow: none; /* Removes shadow borders */
+}
+section {
+  padding: 20px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 900px;
+  border-radius: 1px;
+}
+
   #about {
-    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    background:linear-gradient(to right, #f0f8ff, #e6e6fa);
     padding: 50px 20px;
     text-align: center;
 }
@@ -34,10 +51,9 @@
 .about-container {
     max-width: 800px;
     margin: auto;
-    background: none;
+    background: linear-gradient(to right, #f0f8ff, #e6e6fa);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 #about h2 {
@@ -61,31 +77,16 @@
 .book {
     display: flex;
     justify-content: space-between;
-    background: #f4f4f4;
+    background: linear-gradient(to right, #f0f8ff, #e6e6fa);
     padding: 10px;
     margin-bottom: 5px;
     border-radius: 5px;
 }
-
-.select-btn {
-    background-color: #5d8c56;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 3px;
-}
-
-.select-btn:hover {
-    background-color: #4a6f43;
-}
-
-/* Book Details */
 #book-details {
     text-align: center;
     margin-top: 20px;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: none;
     max-width: 400px;
     margin: auto;
 }
@@ -99,7 +100,7 @@ aside {
   background: white;
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow:none;
 }
 #books {
   list-style: none;
@@ -107,10 +108,10 @@ aside {
 }
 main {
   width: 65%;
-  background: white;
+  background: linear-gradient(to right, #f0f8ff, #e6e6fa);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
 }
 .Books-info {
   display: flex;
@@ -141,13 +142,16 @@ button {
 button:hover {
   background-color: #2980b9;
 }
+#contact{
+  background: linear-gradient(to right, #f0f8ff, #e6e6fa);
+}
 .contact-container {
   width: 50%;
   margin: 50px auto;
   padding: 30px;
   background: linear-gradient(to bottom right, #a8dadc, #457b9d);
   border-radius: 12px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: none;
   text-align: center;
 }
 
