@@ -64,8 +64,8 @@ section {
 
 #about p {
     color: #555;
-    font-size: 18px;
-    line-height: 1.6;
+    font-size: 17px;
+    line-height: 1.5;
 }
 
   #books {
@@ -230,4 +230,24 @@ button:hover {
   #Contact textarea {
       width: 100%;
   }
+}
+footer {
+  background: #333; /* Dark background */
+  color: white; /* White text */
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-container a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-container a:hover {
+  color: #ff9900;
 }
