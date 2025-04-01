@@ -15,9 +15,6 @@
 - **Backend API:** JSON Server (for testing), Node.js
 - **Deployment:** Render.com
 
-## 🚀 Live Demo
-🌍 **Live URL:** [BookHub](books-hub-liard.vercel.app)
-
 ## ⚙️ Setup & Installation
 ### 1️⃣ Clone the Repository
 ```bash
@@ -46,9 +43,6 @@ https://bookhub-server-waq9.onrender.com
 ### Available Endpoints:
 - `GET /books` → Fetch all books
 - `GET /books/:id` → Fetch a single book by ID
-
-## 📷 Screenshots
-(Add relevant screenshots here)
 
 ## 🛠️ Contributing
 1. Fork the repository.

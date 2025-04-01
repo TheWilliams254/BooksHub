@@ -1,4 +1,4 @@
-const API_URL = "https://bookhub-server-waq9.onrender.com"; // ✅ Store API URL in a variable
+const API_URL = "https://bookhub-server-waq9.onrender.com";
 
 document.addEventListener("DOMContentLoaded", () => {
     fetchBooks();
